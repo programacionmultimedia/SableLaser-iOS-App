@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4B8E73E13E7ED87004D9720 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8E73D13E7ED87004D9720 /* UIKit.framework */; };
+		C4B8E74013E7ED87004D9720 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8E73F13E7ED87004D9720 /* Foundation.framework */; };
+		C4B8E74213E7ED87004D9720 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8E74113E7ED87004D9720 /* CoreGraphics.framework */; };
+		C4B8E74813E7ED87004D9720 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E74613E7ED87004D9720 /* InfoPlist.strings */; };
+		C4B8E74B13E7ED87004D9720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E74A13E7ED87004D9720 /* main.m */; };
+		C4B8E74E13E7ED87004D9720 /* SilentGalaxyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E74D13E7ED87004D9720 /* SilentGalaxyAppDelegate.m */; };
+		C4B8E75113E7ED87004D9720 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E74F13E7ED87004D9720 /* MainWindow.xib */; };
+		C4B8E75413E7ED87004D9720 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E75313E7ED87004D9720 /* FirstViewController.m */; };
+		C4B8E75713E7ED87004D9720 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E75613E7ED87004D9720 /* SecondViewController.m */; };
+		C4B8E75A13E7ED87004D9720 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E75813E7ED87004D9720 /* FirstView.xib */; };
+		C4B8E75D13E7ED87004D9720 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E75B13E7ED87004D9720 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4B8E73913E7ED87004D9720 /* SilentGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SilentGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B8E73D13E7ED87004D9720 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C4B8E73F13E7ED87004D9720 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C4B8E74113E7ED87004D9720 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C4B8E74513E7ED87004D9720 /* SilentGalaxy-Info.plist */ = {isa = PBXFileReference; path = "SilentGalaxy-Info.plist"; sourceTree = "<group>"; };
+		C4B8E74713E7ED87004D9720 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4B8E74913E7ED87004D9720 /* SilentGalaxy-Prefix.pch */ = {isa = PBXFileReference; path = "SilentGalaxy-Prefix.pch"; sourceTree = "<group>"; };
+		C4B8E74A13E7ED87004D9720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4B8E74C13E7ED87004D9720 /* SilentGalaxyAppDelegate.h */ = {isa = PBXFileReference; path = SilentGalaxyAppDelegate.h; sourceTree = "<group>"; };
+		C4B8E74D13E7ED87004D9720 /* SilentGalaxyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SilentGalaxyAppDelegate.m; sourceTree = "<group>"; };
+		C4B8E75013E7ED87004D9720 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		C4B8E75213E7ED87004D9720 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		C4B8E75313E7ED87004D9720 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		C4B8E75513E7ED87004D9720 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		C4B8E75613E7ED87004D9720 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C4B8E75913E7ED87004D9720 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		C4B8E75C13E7ED87004D9720 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4B8E73613E7ED87004D9720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B8E73E13E7ED87004D9720 /* UIKit.framework in Frameworks */,
+				C4B8E74013E7ED87004D9720 /* Foundation.framework in Frameworks */,
+				C4B8E74213E7ED87004D9720 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4B8E72E13E7ED87004D9720 = {
+			isa = PBXGroup;
+			children = (
+				C4B8E74313E7ED87004D9720 /* SilentGalaxy */,
+				C4B8E73C13E7ED87004D9720 /* Frameworks */,
+				C4B8E73A13E7ED87004D9720 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4B8E73A13E7ED87004D9720 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8E73913E7ED87004D9720 /* SilentGalaxy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4B8E73C13E7ED87004D9720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8E73D13E7ED87004D9720 /* UIKit.framework */,
+				C4B8E73F13E7ED87004D9720 /* Foundation.framework */,
+				C4B8E74113E7ED87004D9720 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4B8E74313E7ED87004D9720 /* SilentGalaxy */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8E74C13E7ED87004D9720 /* SilentGalaxyAppDelegate.h */,
+				C4B8E74D13E7ED87004D9720 /* SilentGalaxyAppDelegate.m */,
+				C4B8E74F13E7ED87004D9720 /* MainWindow.xib */,
+				C4B8E75213E7ED87004D9720 /* FirstViewController.h */,
+				C4B8E75313E7ED87004D9720 /* FirstViewController.m */,
+				C4B8E75513E7ED87004D9720 /* SecondViewController.h */,
+				C4B8E75613E7ED87004D9720 /* SecondViewController.m */,
+				C4B8E75813E7ED87004D9720 /* FirstView.xib */,
+				C4B8E75B13E7ED87004D9720 /* SecondView.xib */,
+				C4B8E74413E7ED87004D9720 /* Supporting Files */,
+			);
+			path = SilentGalaxy;
+			sourceTree = "<group>";
+		};
+		C4B8E74413E7ED87004D9720 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8E74513E7ED87004D9720 /* SilentGalaxy-Info.plist */,
+				C4B8E74613E7ED87004D9720 /* InfoPlist.strings */,
+				C4B8E74913E7ED87004D9720 /* SilentGalaxy-Prefix.pch */,
+				C4B8E74A13E7ED87004D9720 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4B8E73813E7ED87004D9720 /* SilentGalaxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B8E76013E7ED87004D9720 /* Build configuration list for PBXNativeTarget "SilentGalaxy" */;
+			buildPhases = (
+				C4B8E73513E7ED87004D9720 /* Sources */,
+				C4B8E73613E7ED87004D9720 /* Frameworks */,
+				C4B8E73713E7ED87004D9720 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SilentGalaxy;
+			productName = SilentGalaxy;
+			productReference = C4B8E73913E7ED87004D9720 /* SilentGalaxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4B8E73013E7ED87004D9720 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C4B8E73313E7ED87004D9720 /* Build configuration list for PBXProject "SilentGalaxy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4B8E72E13E7ED87004D9720;
+			productRefGroup = C4B8E73A13E7ED87004D9720 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4B8E73813E7ED87004D9720 /* SilentGalaxy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4B8E73713E7ED87004D9720 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B8E74813E7ED87004D9720 /* InfoPlist.strings in Resources */,
+				C4B8E75113E7ED87004D9720 /* MainWindow.xib in Resources */,
+				C4B8E75A13E7ED87004D9720 /* FirstView.xib in Resources */,
+				C4B8E75D13E7ED87004D9720 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4B8E73513E7ED87004D9720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B8E74B13E7ED87004D9720 /* main.m in Sources */,
+				C4B8E74E13E7ED87004D9720 /* SilentGalaxyAppDelegate.m in Sources */,
+				C4B8E75413E7ED87004D9720 /* FirstViewController.m in Sources */,
+				C4B8E75713E7ED87004D9720 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4B8E74613E7ED87004D9720 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B8E74713E7ED87004D9720 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C4B8E74F13E7ED87004D9720 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B8E75013E7ED87004D9720 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		C4B8E75813E7ED87004D9720 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B8E75913E7ED87004D9720 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		C4B8E75B13E7ED87004D9720 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B8E75C13E7ED87004D9720 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4B8E75E13E7ED87004D9720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C4B8E75F13E7ED87004D9720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		C4B8E76113E7ED87004D9720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SilentGalaxy/SilentGalaxy-Prefix.pch";
+				INFOPLIST_FILE = "SilentGalaxy/SilentGalaxy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C4B8E76213E7ED87004D9720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SilentGalaxy/SilentGalaxy-Prefix.pch";
+				INFOPLIST_FILE = "SilentGalaxy/SilentGalaxy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4B8E73313E7ED87004D9720 /* Build configuration list for PBXProject "SilentGalaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B8E75E13E7ED87004D9720 /* Debug */,
+				C4B8E75F13E7ED87004D9720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B8E76013E7ED87004D9720 /* Build configuration list for PBXNativeTarget "SilentGalaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B8E76113E7ED87004D9720 /* Debug */,
+				C4B8E76213E7ED87004D9720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4B8E73013E7ED87004D9720 /* Project object */;
+}
