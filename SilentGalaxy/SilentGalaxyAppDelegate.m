@@ -7,6 +7,10 @@
 //
 
 #import "SilentGalaxyAppDelegate.h"
+#import "SoundViewController.h"
+#import "SoundsModel.h"
+#import "BlasterViewController.h"
+
 
 @implementation SilentGalaxyAppDelegate
 
@@ -15,12 +19,54 @@
 
 @synthesize tabBarController=_tabBarController;
 
+
+
+@synthesize soundsArray=_soundsArray;
+@synthesize blasterSoundsArray=_blasterSoundsArray;
+
+-(id) init
+{
+    
+    if ((self = [super init])) 
+    {
+        
+      
+        
+        
+        
+    }
+    
+    return self;
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
+    
+    soundsModel=[[SoundsModel alloc ]init] ;
+    [self setSoundsArray:[soundsModel soundsArray ]] ;
+    [self setBlasterSoundsArray:[soundsModel blasterSoundsArray ]] ;
+    
     self.window.rootViewController = self.tabBarController;
+    //NSLog(@"tabbar%@",[[_tabBarController.viewControllers objectAtIndex:1] description]);
+    
+    SoundViewController *sonidosController=[_tabBarController.viewControllers objectAtIndex:1];
+    BlasterViewController *blasterController=[_tabBarController.viewControllers objectAtIndex:2];
+    
+    //NSLog(@"soundsArray: %d",[self.soundsArray count]);
+    
+    
+    
+    [sonidosController setSoundsArray: self.soundsArray ];
+    [blasterController setBlasterSoundsArray:self.blasterSoundsArray];
+      
+    //[[_tabBarController.viewControllers objectAtIndex:1] description];
+   
+
     [self.window makeKeyAndVisible];
+   
     return YES;
 }
 
@@ -38,6 +84,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
+    NSLog(@"appdelegate:applicationDidEnterBackground");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -61,12 +108,18 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    
 }
+
 
 - (void)dealloc
 {
+    
     [_window release];
     [_tabBarController release];
+    [_soundsArray release];
+    [_blasterSoundsArray release];
+    [soundsModel release];
     [super dealloc];
 }
 
