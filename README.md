@@ -18,3 +18,10 @@
     <li>Al no haber sido modificada desde 2012, seguro hay que hacer algunos cambios para que funcione</li>
     <li>Compilaba con iOS6 y estuvo unos 5 o 6 años en el App Store</li>
 </ul>
+<h2>¿Cómo está hecho? Tutorial 👨‍🏫</h2>
+<p>Para seguir los pasos de análisis del código expuesto, lo he dividido en 3 partes que se pueden consultar aquí:</p>
+<ul>
+    <li><a target="_blank" href="https://programacionmultimedia.net/ios-sable-laser-con-uiaccelerometer-y-sonido-i/">Sable láser con UIAccelerometer y sonido (I)</a></li>
+    <li><a target="_blank" href="https://programacionmultimedia.net/ios-sable-laser-con-uiaccelerometer-y-sonido-ii/">Sable láser con UIAccelerometer y sonido (II)</a></li>
+    <li><a target="_blank" href="https://programacionmultimedia.net/ios-sable-laser-con-uiaccelerometer-y-sonido-iii/">Sable láser con UIAccelerometer y sonido (III)</a></li>
+</ul>
