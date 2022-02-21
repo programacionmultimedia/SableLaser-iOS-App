@@ -10,38 +10,41 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 
-
-
-
-
-
 @implementation SaberOnViewController
 
 @synthesize delegate=_delegate;
-@synthesize acelerometro, saberOnView, saberSoundsArray, saberSoundsModel;
+@synthesize saberOnView;
+@synthesize saberSoundsArray = _saberSoundsArray;
 
 double const kminimum = 0.8;
 double const knegativeMinimum = -0.8;
 double const kmaximum = 1.3;
 double const knegativeMaximum = -1.3;
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        NSLog(@"SaberOnViewController-init");
+    }
+    return self;
+}
 
 
 - (void)dealloc
 {
     
-    
-    [self.saberSoundsModel release]; 
+  
+       
+    //[self.acelerometro release];
+    //[self.saberOnView release];
     [self.saberSoundsArray release];
-    [pulse release];
-    [stopLaser release];
-    [pasada1 release];
-    [pasada2 release];
-    [pasada3 release];
-    [pasada4 release];
-    [startLaser release];
-    [self.acelerometro release];
-    [self.saberOnView release];
+    
+ 
+    
+    
+    NSLog(@"SaberOnViewController-dealloc");
     
     [super dealloc];
 }
@@ -74,18 +77,19 @@ double const knegativeMaximum = -1.3;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    self.saberSoundsModel=nil;
-    self.saberSoundsArray=nil;
-    pulse=nil;
-    stopLaser =nil;
-    pasada1 =nil;
-    pasada2 =nil;
-    pasada3 =nil;
-    pasada4 =nil;
-    startLaser =nil;
-    self.acelerometro =nil;
-    self.saberOnView =nil;
+   
+    
 
+
+    self.saberOnView=nil;
+    acelerometro=nil;
+    self.saberSoundsArray=nil;
+ 
+ 
+
+    
+    
+    
     NSLog(@"viewDidUnload");
 }
 
@@ -104,19 +108,21 @@ double const knegativeMaximum = -1.3;
 	[saberOnView canBecomeFirstResponder];
 	[saberOnView becomeFirstResponder];
     
-    self.saberSoundsModel=[[SaberSoundsModel alloc] init];
-    self.saberSoundsArray=self.saberSoundsModel.saberSoundsArray;
+        
+    NSLog(@"self.saberSoundsArray retain Count: %i",[self.saberSoundsArray retainCount]); 
+
     
+        
     
     
     
     [self createSounds];
     
-    self.acelerometro = [UIAccelerometer sharedAccelerometer];
+    acelerometro = [UIAccelerometer sharedAccelerometer];
     
-    [self.acelerometro setUpdateInterval:0.0416]; 
+    [acelerometro setUpdateInterval:0.0416]; 
     
-    [self.acelerometro setDelegate:self];
+    [acelerometro setDelegate:self];
     
     //variables del acelerometro
     min=kminimum;
@@ -129,11 +135,9 @@ double const knegativeMaximum = -1.3;
       
 	
 	self.view = saberOnView;
-	//[saberOnView release];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationNone];
-    
-    
+	[saberOnView release];
+     NSLog(@"saberOnView retain Count: %i",[saberOnView retainCount]);
+
    
     [startLaser play];
 
@@ -159,9 +163,12 @@ double const knegativeMaximum = -1.3;
 
 - (void)done
 {
+    [acelerometro setDelegate:nil];
+     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     [pulse stop];
+    
     [stopLaser play];
-    [self.acelerometro setDelegate:nil];
+    
     
     UIApplication *thisApp = [UIApplication sharedApplication];
     thisApp.idleTimerDisabled = NO;
@@ -179,7 +186,7 @@ double const knegativeMaximum = -1.3;
     {
         
        saberOnView.xShift = saberOnView.xShift * 0.8 + [accel x] * 20.0;
-      
+      NSLog(@"monitoring accelerometer2");
         
         
         // Redraw the view
@@ -234,7 +241,7 @@ double const knegativeMaximum = -1.3;
             //NSLog(@"randomHit:%i",randomHit);
             
             
-            [(AVAudioPlayer *)[saberSoundsArray objectAtIndex:randomHit]   play] ;
+            [(AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:randomHit]    play] ;
             max=accel.y;
             
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -242,9 +249,6 @@ double const knegativeMaximum = -1.3;
         }
 
 
-
-       
-        
 
         //NSLog(@"accel.x:%f",accel.x);
         //NSLog(@"accel.y:%f",accel.y);
@@ -256,7 +260,7 @@ double const knegativeMaximum = -1.3;
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    NSLog(@"viewDidDisappear");
+       
     
 }
 
@@ -269,41 +273,40 @@ double const knegativeMaximum = -1.3;
    
     pulse.numberOfLoops=-1;
     pulse.delegate=self;
-    [pulse retain];
+   
+    
        
     //sonido entrada*************************
     
     startLaser=(AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:1];
-    [startLaser retain];
+   
 
     
     //sonido salida*************************
     stopLaser = (AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:2];
-    [stopLaser retain];
+    
     
 
     
     //sonido pasada1*************************
         
     pasada1 = (AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:3];
-    [pasada1 retain];
+   
 
     //sonido pasada2*************************
     pasada2 = (AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:4];
-    [pasada2 retain];
+    
     
     //sonido pasada3*************************
        
     pasada3 = (AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:5];
-    [pasada3 retain];
+    
     
     //sonido pasada4*************************
        
     
     pasada4 = (AVAudioPlayer *)[self.saberSoundsArray objectAtIndex:6];
-    [pasada4 retain];
-
-    
+   
 
 
 

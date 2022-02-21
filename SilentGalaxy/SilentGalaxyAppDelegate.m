@@ -7,9 +7,10 @@
 //
 
 #import "SilentGalaxyAppDelegate.h"
-#import "SoundViewController.h"
-#import "SoundsModel.h"
-#import "BlasterViewController.h"
+#import "SaberSoundsModel.h"
+
+#import "SaberViewController.h"
+
 
 
 @implementation SilentGalaxyAppDelegate
@@ -21,8 +22,8 @@
 
 
 
-@synthesize soundsArray=_soundsArray;
-@synthesize blasterSoundsArray=_blasterSoundsArray;
+
+
 
 -(id) init
 {
@@ -45,26 +46,26 @@
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     
-    soundsModel=[[SoundsModel alloc ]init] ;
-    [self setSoundsArray:[soundsModel soundsArray ]] ;
-    [self setBlasterSoundsArray:[soundsModel blasterSoundsArray ]] ;
-    
-    self.window.rootViewController = self.tabBarController;
-    //NSLog(@"tabbar%@",[[_tabBarController.viewControllers objectAtIndex:1] description]);
-    
-    SoundViewController *sonidosController=[_tabBarController.viewControllers objectAtIndex:1];
-    BlasterViewController *blasterController=[_tabBarController.viewControllers objectAtIndex:2];
-    
-    //NSLog(@"soundsArray: %d",[self.soundsArray count]);
-    
-    
-    
-    [sonidosController setSoundsArray: self.soundsArray ];
-    [blasterController setBlasterSoundsArray:self.blasterSoundsArray];
-      
-    //[[_tabBarController.viewControllers objectAtIndex:1] description];
    
-
+       
+    self.window.rootViewController = self.tabBarController;
+    
+     SaberViewController *saberController=[_tabBarController.viewControllers objectAtIndex:0];
+    
+     saberSoundsModel = [[SaberSoundsModel alloc] init];
+     [saberController setSaberSoundsArray: [saberSoundsModel saberSoundsArray ]];
+    
+     [saberSoundsModel release];
+    
+   
+         
+   
+    
+      
+    
+ 
+       
+   
     [self.window makeKeyAndVisible];
    
     return YES;
@@ -117,10 +118,8 @@
     
     [_window release];
     [_tabBarController release];
-    [_soundsArray release];
-    [_blasterSoundsArray release];
-    [soundsModel release];
-    [super dealloc];
+   
+      [super dealloc];
 }
 
 /*

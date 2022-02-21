@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "SaberOnView.h"
- #import "SaberSoundsModel.h"
+
 
 
 @protocol SaberOnViewControllerDelegate;
@@ -25,9 +25,10 @@
     AVAudioPlayer *pasada3;
     AVAudioPlayer *pasada4;
    
-    // NSMutableArray *saberSoundsArray;
-    //SaberSoundsModel *saberSoundsModel;
-    //UIAccelerometer *acelerometro;
+    
+   
+    NSMutableArray *saberSoundsArray;
+    UIAccelerometer *acelerometro;
     //SaberOnView *saberOnView;
     
     double min;
@@ -42,11 +43,10 @@
 
 
 @property (nonatomic, assign) id <SaberOnViewControllerDelegate> delegate;
-@property (nonatomic, retain) UIAccelerometer *acelerometro;
-@property (nonatomic, retain) SaberOnView *saberOnView;
 
+
+@property (nonatomic, retain) SaberOnView *saberOnView;
 @property (nonatomic, retain)  NSMutableArray *saberSoundsArray;
-@property (nonatomic, retain)  SaberSoundsModel *saberSoundsModel;
 
 
 - (void) done;

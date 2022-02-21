@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class SoundsModel;
+@class SaberSoundsModel;
 
 
 @interface SilentGalaxyAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 
    
-    SoundsModel *soundsModel;
-    NSMutableArray *soundsArray;
-    NSMutableArray *blasterSoundsArray;
+    SaberSoundsModel *saberSoundsModel;
+    
+    
+
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -24,8 +25,8 @@
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 
-@property (nonatomic, retain)  NSMutableArray *soundsArray;
-@property (nonatomic, retain)  NSMutableArray *blasterSoundsArray;
+
+
 
 
 
