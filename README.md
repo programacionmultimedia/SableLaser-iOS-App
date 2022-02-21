@@ -1,8 +1,8 @@
 <h1>SableLaser 📱</h1>
 <p>
 📍App para iOS que consiste en en una simulación de sonidos y efectos de un <strong>sable láser de Star Wars</strong>.
-Hace uso del <strong>acelerómetro y el giroscopio</strong> para detectar movimientos y generar los efectos. 
-Escrito en Objective-C</p>
+<br>Hace uso del <strong>acelerómetro y el giroscopio</strong> para detectar movimientos y generar los efectos. 
+<br>Escrito en Objective-C</p>
 
 <h2>Construido con 🛠️</h2>
 <p>XCode | Objective-C</p>
